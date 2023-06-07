@@ -71,7 +71,9 @@ RUN cd ./build && \
     cmake --build . --config Release -j 8
 
 # leaving this here to show how to load example data into docker image
-# RUN mkdir /agavedata
+RUN mkdir /agavedata
+RUN cp aneurism.ome.tif /agavedata/
+RUN cp C1-retina.ome.tif /agavedata/
 # RUN cp AICS-11_409.ome.tif /agavedata/
 # RUN cp AICS-12_881.ome.tif /agavedata/
 # RUN cp AICS-13_319.ome.tif /agavedata/
